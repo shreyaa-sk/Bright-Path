@@ -1,5 +1,4 @@
 import LandingNav from '@/components/LandingNav';
-import Image from 'next/image';
 import React from 'react';
 
 const page = () => {

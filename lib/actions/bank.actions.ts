@@ -1,12 +1,7 @@
 "use server";
 
 import {
-  ACHClass,
   CountryCode,
-  TransferAuthorizationCreateRequest,
-  TransferCreateRequest,
-  TransferNetwork,
-  TransferType,
 } from "plaid";
 
 import { plaidClient } from "../plaid";
@@ -147,6 +142,16 @@ export const getInstitution = async ({
 };
 
 // Get transactions
+interface Transaction {
+  $id: string;               // The unique ID of the transaction document
+  name?: string;             // Name of the transaction, optional
+  amount?: number;           // Amount for the transaction, optional
+  $createdAt: string;        // Creation date of the transaction
+  channel?: string;          // Payment channel, such as "online" or "in-store", optional
+  category?: string[];       // Category of the transaction, which could be an array
+  senderBankId?: string;     // ID of the bank sending funds, used to determine type (debit or credit)
+}
+
 export const getTransactions = async ({
   accessToken,
 }: getTransactionsProps) => {

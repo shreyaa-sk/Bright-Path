@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import LoanSection from './LoansPage'; // Import the LoanSection component
 
 type LoanType = 'personal' | 'home' | 'gold' | 'education';
 
@@ -26,6 +25,7 @@ const LoanItem: React.FC<LoanItemProps> = ({ loanType, title, description, image
         <img src={imageUrl} alt={title} className='w-32 h-32 rounded-lg' />
         <div className="flex-1 mx-4">
           <h3 className="text-lg font-bold">{title}</h3>
+          <p className="text-lg font-bold">{loanType}</p>
           <p className="text-gray-700">{description}</p>
         </div>
         <button className="text-blue-600 font-bold">{isOpen ? '-' : '+'}</button>

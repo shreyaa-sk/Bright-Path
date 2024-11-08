@@ -41,6 +41,7 @@ const LoanSection: React.FC<LoanSectionProps> = ({
         <img src={imageUrl} alt={title} className="w-32 h-32 rounded-lg" />
         <div className="flex-1 mx-4">
           <h2 className="text-2xl font-semibold text-[#E66B2D] mb-2">{title}</h2>
+          <p className="text-2xl font-semibold text-[#E66B2D] mb-2">{loanType}</p>
           <p className="text-gray-700">{description}</p>
         </div>
         <button className="text-blue-600 font-bold">{isOpen ? '-' : '+'}</button>

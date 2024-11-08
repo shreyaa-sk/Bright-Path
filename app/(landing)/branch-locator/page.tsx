@@ -8,7 +8,7 @@ const BranchLocator = () => {
       <LandingNav />
 
       <div className="flex flex-col justify-normal items-center w-full min-h-screen p-4 bg-orange-100">
-        <h1 className="text-5xl text-[#e66b2d] font-bold mb-12 mt-12">Our Bank's Locations</h1>
+        <h1 className="text-5xl text-[#e66b2d] font-bold mb-12 mt-12">Our Bank&apos;s Locations</h1>
 
         <div className="w-full max-w-5xl min-h-dvh bg-white rounded-lg shadow-lg overflow-hidden">
           <iframe 

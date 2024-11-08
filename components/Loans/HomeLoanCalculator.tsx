@@ -27,13 +27,12 @@ const LoanCalculator: React.FC = () => {
   const calculateIt = () => {
     const A = amount;
     const Y = periodYears;
-    let I = interest / 100;
     
-    let R = I / 12;
-    if (I < 0.001) {
+    let R = interest / 100 / 12;
+    if (interest < 0.1) {
       R = 0.001 / 12;
       setInterest(0.1);
-    } else if (I > 0.2) {
+    } else if (interest > 20) {
       R = 0.2 / 12;
       setInterest(20);
     }
