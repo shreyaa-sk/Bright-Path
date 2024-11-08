@@ -4,11 +4,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 
-import LandingNav from '/Users/shreyakale/GitHub/mainFolder/bp-banking/components/LandingNav';
-import Hero from '/Users/shreyakale/GitHub/mainFolder/bp-banking/components/Hero';
-import LandingFooter from '/Users/shreyakale/GitHub/mainFolder/bp-banking/components/LandingFooter';
-import ClientsCarousel from '/Users/shreyakale/GitHub/mainFolder/bp-banking/components/ClientsCarousel'; // Import ClientsCarousel
 import Image from "next/image";
+import LandingNav from "@/components/LandingNav";
+import Hero from "@/components/Hero";
+import ClientsCarousel from "@/components/ClientsCarousel";
+import LandingFooter from "@/components/LandingFooter";
 
 const page = () => {
   return (

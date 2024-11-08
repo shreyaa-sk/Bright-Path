@@ -44,3 +44,5 @@ export async function POST(req:NextRequest, res:NextResponse) {
     
   }
 }
+
+SENTRY_AUTH_TOKEN = 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
