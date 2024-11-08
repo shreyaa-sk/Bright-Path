@@ -1,7 +1,7 @@
 'use server';
 
 import { ID, Query } from "node-appwrite";
-import { createAdminClient, createSessionClient } from "/Users/shreyakale/GitHub/mainFolder/bp-banking/lib/server/appwrite";
+
 import { cookies } from "next/headers";
 import { encryptId, extractCustomerIdFromUrl, parseStringify } from "../utils";
 import { CountryCode, ProcessorTokenCreateRequest, ProcessorTokenCreateRequestProcessorEnum, Products } from "plaid";
@@ -9,6 +9,7 @@ import { CountryCode, ProcessorTokenCreateRequest, ProcessorTokenCreateRequestPr
 import { plaidClient } from '@/lib/plaid';
 import { revalidatePath } from "next/cache";
 import { addFundingSource, createDwollaCustomer } from "./dwolla.actions";
+import { createAdminClient, createSessionClient } from "../server/appwrite";
 
 const {
   APPWRITE_DATABASE_ID: DATABASE_ID,

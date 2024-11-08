@@ -1,8 +1,8 @@
 "use server";
 
 import { ID, Query } from "node-appwrite";
-import { createAdminClient } from "/Users/shreyakale/GitHub/mainFolder/bp-banking/lib/server/appwrite";
 import { parseStringify } from "../utils";
+import { createAdminClient } from "../server/appwrite";
 
 const {
   APPWRITE_DATABASE_ID: DATABASE_ID,
