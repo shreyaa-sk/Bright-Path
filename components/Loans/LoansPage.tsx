@@ -107,7 +107,7 @@ const LoansPage: React.FC = () => {
         features={
           <ul className="list-disc pl-5">
             <li>Loan can cover up to 100% of the on-road price of the car.</li>
-            <li>Interest rates generally range from 7.5% to 10%, depending on the applicant&apos;s credit profile and loan term.</li>
+            <li>Interest rates generally range from 7.5% to 10%, depending on the applicants credit profile and loan term.</li>
             <li>Flexible repayment options with tenures ranging from 1 to 7 years.</li>
             <li>Processing fees typically range from 1% to 2% of the loan amount.</li>
             <li>EMI options can be customized based on repayment capacity and loan tenure.</li>
@@ -180,7 +180,7 @@ const LoansPage: React.FC = () => {
                 <li>Regd. Partnership Deed/MOA/AOA</li>
                 <li>Certificate of incorporation as applicable</li>
                 <li>Account statement for last 12 months</li>
-                <li>Firm&apos;s Audited Financials for last 3 years</li>
+                <li>Firms Audited Financials for last 3 years</li>
               </ul>
             </ul>
           </ul>
@@ -269,7 +269,7 @@ const LoansPage: React.FC = () => {
         }
         interestRates={
           <ul className='list-disc pl-5'>
-            <li>Interest rates range from 8% to 10%, depending on loan amount, tenure, and the applicant&apos;s creditworthiness.</li>
+            <li>Interest rates range from 8% to 10%, depending on loan amount, tenure, and the applicants creditworthiness.</li>
             <li>Processing fees typically range between 0.5%-2% of the loan amount.</li>
           </ul>
         }
