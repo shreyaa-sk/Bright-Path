@@ -1,11 +1,13 @@
-'use client';
+/* eslint-disable react/no-unescaped-entities */
 
-import React, { useState } from 'react';
-import LoanCalculator from './HomeLoanCalculator';
-import GoldLoanCalculator from './GoldLoanCalculator';
+"use client";
 
-type LoanType = 'personal' | 'car' | 'home' | 'gold' | 'education';
-type PaginationTab = 'features' | 'eligibility' | 'interestRates' | 'calculator';
+import React, { useState } from "react";
+import LoanCalculator from "./HomeLoanCalculator";
+import GoldLoanCalculator from "./GoldLoanCalculator";
+
+type LoanType = "personal" | "car" | "home" | "gold" | "education";
+type PaginationTab = "features" | "eligibility" | "interestRates" | "calculator";
 
 interface LoanSectionProps {
   loanType: LoanType;
@@ -28,7 +30,7 @@ const LoanSection: React.FC<LoanSectionProps> = ({
   calculator,
   imageUrl,
 }) => {
-  const [activeTab, setActiveTab] = useState<PaginationTab>('features');
+  const [activeTab, setActiveTab] = useState<PaginationTab>("features");
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDetails = () => {
@@ -44,14 +46,14 @@ const LoanSection: React.FC<LoanSectionProps> = ({
           <p className="text-2xl font-semibold text-[#E66B2D] mb-2">{loanType}</p>
           <p className="text-gray-700">{description}</p>
         </div>
-        <button className="text-blue-600 font-bold">{isOpen ? '-' : '+'}</button>
+        <button className="text-blue-600 font-bold">{isOpen ? "-" : "+"}</button>
       </div>
 
       {isOpen && (
         <>
           {/* Pagination Tabs */}
           <div className="pagination-tabs flex space-x-4 mb-4 border-b-2 border-gray-200 pb-2">
-            {['features', 'eligibility', 'interestRates', 'calculator'].map((tab) => (
+            {["features", "eligibility", "interestRates", "calculator"].map((tab) => (
               <button
                 key={tab}
                 className={`px-4 py-2 font-medium text-sm ${
@@ -66,25 +68,25 @@ const LoanSection: React.FC<LoanSectionProps> = ({
 
           {/* Tab Content */}
           <div className="tab-content">
-            {activeTab === 'features' && (
+            {activeTab === "features" && (
               <div className="text-gray-700">
                 <h3 className="text-lg font-medium mb-2">Features</h3>
                 {features}
               </div>
             )}
-            {activeTab === 'eligibility' && (
+            {activeTab === "eligibility" && (
               <div className="text-gray-700">
                 <h3 className="text-lg font-medium mb-2">Eligibility</h3>
                 {eligibility}
               </div>
             )}
-            {activeTab === 'interestRates' && (
+            {activeTab === "interestRates" && (
               <div className="text-gray-700">
                 <h3 className="text-lg font-medium mb-2">Interest Rates and Charges</h3>
                 {interestRates}
               </div>
             )}
-            {activeTab === 'calculator' && (
+            {activeTab === "calculator" && (
               <div className="text-gray-700">
                 <h3 className="text-lg font-medium mb-2">Loan Parameters Calculator</h3>
                 {calculator}
@@ -114,7 +116,7 @@ const LoansPage: React.FC = () => {
           </ul>
         }
         eligibility={
-          <ul className='list-disc pl-5'>
+          <ul className="list-disc pl-5">
             <li>Age requirement: Between 21 and 65 years.</li>
             <li>Eligible for employed individuals, self-employed professionals, and business owners.</li>
             <li>A stable income source and good credit score are required for eligibility.</li>
@@ -195,8 +197,8 @@ const LoansPage: React.FC = () => {
             </ul>
             <li><strong>Charges</strong></li>
             <ul className="list-disc pl-5">
-              <li>PPC For Individuals: One time @0.25% of Loan amount: Min. Rs. 1500/- to Max. Rs. 20000/-</li>
-              <li>PPC For Other than individuals: One time @0.50% of Loan amount: Min. Rs. 3000/- to Max. Rs. 40000/-</li>
+              <li>PPC For Individuals: One time 0.25% of Loan amount: Min. Rs. 1500/- to Max. Rs. 20000/-</li>
+              <li>PPC For Other than individuals: One time 0.50% of Loan amount: Min. Rs. 3000/- to Max. Rs. 40000/-</li>
             </ul>
           </ul>
         }
