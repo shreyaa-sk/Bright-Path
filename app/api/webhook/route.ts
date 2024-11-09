@@ -3,16 +3,16 @@ import { NextResponse, NextRequest } from "next/server";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET!);
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
   
   const payload = await req.text();
 
-  const response = JSON.parse(payload);
+  const res = JSON.parse(payload);
 
   const sig = req.headers.get("Stripe-Signature");
 
-  const dateTime = new Date(response?.created * 1000).toLocaleDateString();
-  const timeString = new Date(response?.created * 1000).toLocaleDateString();
+  const dateTime = new Date(res?.created * 1000).toLocaleDateString();
+  const timeString = new Date(res?.created * 1000).toLocaleDateString();
 
   try {
     // Use const here as the event variable is not reassigned

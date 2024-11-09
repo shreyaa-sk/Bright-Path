@@ -8,21 +8,21 @@ const testimonials = [
         text: "I’ve always been into tech, and BrightPath’s mobile app is one of the best banking apps I’ve ever used. Everything is at my fingertips – from monitoring my spending habits to instantly transferring money between accounts. Their commitment to innovation and security gives me peace of mind knowing my finances are in good hands.",
         workTitle: "Tech Professional",
         name: "Brian Doe",
-        photo: "path-to-photo1.jpg"
+        photo: "/icons/boy.png"
     },
     {
         title: "Starting Strong with Expert Financial Support",
         text: "Starting a new business can be a daunting task, but BrightPath made it so much easier. From setting up my business account to securing a small business loan, their team guided me through the entire process. They offer competitive rates and the best customer support I’ve ever received. I feel confident that I made the right choice by choosing BrightPath.",
         name: "James Robert",
         workTitle: "Entrepreneur",
-        photo: "path-to-photo2.jpg"
+        photo: "/icons/bussiness-man.png"
     },
     {
         title: "Empowering My Small Business",
         text: "As a small business owner, managing cash flow can be incredibly stressful. But BrightPath Bank’s business account management system has been a game-changer for me. Their intuitive platform makes it so easy to track expenses, manage invoices, and even apply for business loans. I can focus on growing my business knowing that BrightPath has my back!",
         name: "Sara Johnson",
         workTitle: "Small Business Owner",
-        photo: "path-to-photo3.jpg"
+        photo: "/icons/girl.png"
     }
 ];
 
@@ -50,11 +50,11 @@ const ClientsCarousel = () => {
     }, [currentIndex]);
 
     return (
-        <div className="relative w-full md:w-3/4 p-10 bg-white bg-opacity-0 mx-auto">
+        <div className="relative w-full md:w-3/4 p-10 bg-white mx-auto">
             {/* Left Arrow Button */}
             <button 
                 onClick={goToPrevious} 
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl text-white hover:text-orange-400"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl text-[#E66B2D] hover:text-orange-800"
             >
                 ❮
             </button>
@@ -64,9 +64,9 @@ const ClientsCarousel = () => {
                 <section className="relative flex transition-transform duration-1000 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="flex-shrink-0 h-3/6 w-full">
-                            <h1 className='text-white mx-auto font-bold text-center text-3xl sm:text-3xl h-6'>{testimonial.title}</h1>
+                            <h1 className='text-[#E66B2D] mx-auto font-bold text-center text-3xl sm:text-3xl h-6'>{testimonial.title}</h1>
                             <figure className="mt-10">
-                                <blockquote className="px-10 text-center text-lg font-normal text-white sm:text-lg">
+                                <blockquote className="px-10 text-center text-lg font-normal text-[#000000] sm:text-lg">
                                     <p>
                                         {testimonial.text}
                                     </p>
@@ -94,7 +94,7 @@ const ClientsCarousel = () => {
             {/* Right Arrow Button */}
             <button 
                 onClick={goToNext} 
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 text-3xl text-white hover:text-orange-400"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 text-3xl text-[#E66B2D] hover:text-orange-800"
             >
                 ❯
             </button>

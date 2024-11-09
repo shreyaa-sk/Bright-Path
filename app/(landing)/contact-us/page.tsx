@@ -7,20 +7,22 @@ const page = () => {
     <>
       <LandingNav />
 
-      <section className="bg-logo-orange text-logo-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
-          <p className="text-lg">
+      {/* Main Contact Us section */}
+      <section className="bg-logo-orange text-logo-white py-16 lg:py-20">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-4xl font-bold mb-4 lg:mb-6">Contact Us</h1>
+          <p className="text-lg max-w-2xl mx-auto">
             We&apos;re here to assist you. Please feel free to reach out with any questions or inquiries.
           </p>
         </div>
       </section>
 
-      <section className="bg-white">
-        <div className="container mx-auto px-6">
+      {/* Get In Touch Form section */}
+      <section className="bg-white mb-16">
+        <div className="container mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-logo-orange mb-8">Get In Touch</h2>
           <div className="max-w-lg mx-auto">
-            <form className="bg-logo-white p-8 rounded-lg shadow-lg">
+            <form className="bg-logo-white p-6 lg:p-8 rounded-lg shadow-lg">
               <div className="mb-6">
                 <label htmlFor="name" className="block mb-2 text-logo-orange font-semibold">Your Name</label>
                 <input
@@ -49,21 +51,28 @@ const page = () => {
                 ></textarea>
               </div>
               <div className="text-center">
-                <button type="submit" className="bg-logo-orange text-white px-6 py-3 rounded-full font-semibold hover:bg-logo-brown">Submit</button>
+                <button 
+                  type="submit" 
+                  className="bg-logo-orange text-white px-6 py-3 rounded-full font-semibold hover:bg-logo-brown transition-colors"
+                >
+                  Submit
+                </button>
               </div>
             </form>
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-logo-orange">Contact Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Contact Information section */}
+      <section className="py-6 lg:py-10 bg-gray-50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-logo-orange mb-4">Contact Information</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 gap-y-10">
 
+            {/* Email Section */}
             <div className="text-center">
-              <div className="bg-logo-orange text-white p-6 rounded-full inline-block mb-4">
-                <svg className="h-6 w-8" fill="none" stroke="currentColor" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <div className="bg-logo-orange text-[#E66b2d] p-6 rounded-full inline-block">
+                <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 10V8"></path>
                 </svg>
               </div>
@@ -71,8 +80,9 @@ const page = () => {
               <p className="text-gray-600">support@brightpath.com</p>
             </div>
 
+            {/* Call Section */}
             <div className="text-center">
-              <div className="bg-logo-orange text-white p-6 rounded-full inline-block mb-4">
+              <div className="bg-logo-orange text-[#E66b2d] p-6 rounded-full inline-block mb-4">
                 <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8h2a2 2 0 012 2v10a2 2 0 01-2 2h-6a2 2 0 01-2-2v-4m-6 4H5a2 2 0 01-2-2V6a2 2 0 012-2h6a2 2 0 012 2v4"></path>
                 </svg>
@@ -81,8 +91,9 @@ const page = () => {
               <p className="text-gray-600">+1 234 567 890</p>
             </div>
 
+            {/* Visit Section */}
             <div className="text-center">
-              <div className="bg-logo-orange text-white p-6 rounded-full inline-block mb-4">
+              <div className="bg-logo-orange text-[#E66b2d] p-6 rounded-full inline-block mb-4">
                 <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11h2a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V13a2 2 0 012-2h2"></path>
                 </svg>

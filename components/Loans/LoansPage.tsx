@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import LoanCalculator from './HomeLoanCalculator';
 import GoldLoanCalculator from './GoldLoanCalculator';
 
-type LoanType = 'personal' | 'home' | 'gold' | 'education';
+type LoanType = 'personal' | 'car' | 'home' | 'gold' | 'education';
 type PaginationTab = 'features' | 'eligibility' | 'interestRates' | 'calculator';
 
 interface LoanSectionProps {
@@ -101,14 +101,37 @@ const LoansPage: React.FC = () => {
   return (
     <main className="loans-page container mx-auto px-4 py-8">
       <LoanSection
-        loanType="personal"
-        title="Personal Loan"
+        loanType="car"
+        title="Car Loan"
         description="Get access to funds for personal needs with our flexible personal loan options."
-        features={<p>Details about personal loan features...</p>}
-        eligibility={<p>Eligibility criteria for personal loans...</p>}
-        interestRates={<p>Interest rates for personal loans...</p>}
-        calculator={<p>Loan calculator for personal loans...</p>}
-        imageUrl="/icons/loans/icons8-car-sale-96.png"
+        features={
+          <ul className="list-disc pl-5">
+            <li>Loan can cover up to 100% of the on-road price of the car.</li>
+            <li>Interest rates generally range from 7.5% to 10%, depending on the applicant’s credit profile and loan term.</li>
+            <li>Flexible repayment options with tenures ranging from 1 to 7 years.</li>
+            <li>Processing fees typically range from 1% to 2% of the loan amount.</li>
+            <li>EMI options can be customized based on repayment capacity and loan tenure.</li>
+          </ul>
+        }
+        eligibility={
+          <ul className='list-disc pl-5'>
+            <li>Age requirement: Between 21 and 65 years.</li>
+            <li>Eligible for employed individuals, self-employed professionals, and business owners.</li>
+            <li>A stable income source and good credit score are required for eligibility.</li>
+          </ul>
+        }
+        interestRates={
+          <ul>
+            <li>Interest rates range between 7.5% to 10%, based on loan amount and tenure.</li>
+            <li>Processing fees range from 1% to 2% of the loan amount, with a minimum charge of ₹1,000.</li>
+          </ul>
+        }
+        calculator={
+          <ul>
+            <li>Use car loan EMI calculators from banks like ICICI or HDFC to calculate monthly EMI based on loan amount and tenure.</li>
+          </ul>
+        }
+        imageUrl="/icons/loans/car-loan.png"
       />
       <LoanSection
         loanType="home"
@@ -178,7 +201,7 @@ const LoansPage: React.FC = () => {
           </ul>
         }
         calculator={<LoanCalculator/>}
-        imageUrl="/icons/loans/icons8-mortgage-96.png" // Example image path
+        imageUrl="/icons/loans/home-loan.png" // Example image path
       />
       <LoanSection
         loanType="gold"
@@ -221,7 +244,7 @@ const LoansPage: React.FC = () => {
           </ul>
         }
         calculator={<GoldLoanCalculator/>}
-        imageUrl="/icons/loans/icons8-loan-96.png" // Example image path
+        imageUrl="/icons/loans/gold-loan.png" // Example image path
       />
       <LoanSection
         loanType="education"
@@ -230,18 +253,28 @@ const LoansPage: React.FC = () => {
         features={
           <ul className="list-disc pl-5">
             <li>Flexible repayment options</li>
-            {/* Add other features here */}
+            <li>Loan amount can go up to ₹50 lakh without collateral for select institutions and can be as high as ₹1.5 crore with collateral.</li>
+            <li>Interest rates typically start from 8-10% depending on the institution and loan terms.</li>
+            <li>Flexible repayment tenure of up to 15 years with moratorium options covering course duration + 1 year, or 6 months post-employment.</li>
+            <li>Collateral options include residential property, fixed deposits, debt mutual funds, NSC/KVP, or insurance policies.</li>
+            <li>Tax benefits on interest under Section 80E of the Income Tax Act.</li>
+            <li>Insurance policies are available to protect the loan in case of unforeseen events.</li>
           </ul>
         }
         eligibility={
           <ul className="list-disc pl-5">
-            <li>Must be enrolled in an accredited institution</li>
-            {/* Add other eligibility criteria here */}
+            <li>Must be enrolled in an accredited educational institution (India or abroad).</li>
+            <li>Applicable for undergraduate, postgraduate, and professional courses at recognized institutions.</li>
           </ul>
         }
-        interestRates={<p>Interest rates for education loans...</p>}
-        calculator={<p>Loan calculator for education loans...</p>}
-        imageUrl="/icons/loans/icons8-tuition-fees-96.png" // Example image path
+        interestRates={
+          <ul className='list-disc pl-5'>
+            <li>Interest rates range from 8% to 10%, depending on loan amount, tenure, and the applicant’s creditworthiness.</li>
+            <li>Processing fees typically range between 0.5%-2% of the loan amount.</li>
+          </ul>
+        }
+        calculator={<p>Use banks' online calculators (e.g., HDFC Bank Education Loan EMI Calculator) to estimate monthly repayments based on loan amount and tenure.</p>}
+        imageUrl="/icons/loans/education-loan.png" // Example image path
       />
     </main>
   );

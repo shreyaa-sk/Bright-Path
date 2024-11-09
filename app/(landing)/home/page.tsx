@@ -159,7 +159,7 @@ const page = () => {
             </h2>
           </Fade>
           
-          <div className="bg-white p-2 bg-opacity-30 rounded-lg shadow-xl mt-8">
+          <div className="bg-white p-2 rounded-lg shadow-xl mt-8">
             <ClientsCarousel /> {/* Carousel component */}
           </div>
         </div>

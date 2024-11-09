@@ -75,16 +75,6 @@ const LandingNav = () => {
               </Link>
             </li>
             <li>
-              <Link href="/insights" className="block py-2 mt-3 text-white hover:text-logo-brown">
-                Insights
-              </Link>
-            </li>
-            <li>
-              <Link href="/investor-relations" className="block py-2 mt-3 text-white hover:text-logo-brown">
-                Investor Relations
-              </Link>
-            </li>
-            <li>
               <Link href="/contact-us" className="block py-2 mt-3 text-white hover:text-logo-brown">
                 Contact Us
               </Link>

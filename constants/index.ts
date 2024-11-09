@@ -25,12 +25,12 @@ export const sidebarLinks = [
     label: "Loans",
   },
   {
-    imgURL: "/icons/loan.png",
+    imgURL: "/icons/credit-card.png",
     route: "/credit-cards",
     label: "Credit Cards",
   },
   {
-    imgURL: "/icons/loan.png",
+    imgURL: "/icons/cashless-payment.png",
     route: "/payment",
     label: "Payment",
   },
