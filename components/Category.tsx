@@ -1,9 +1,20 @@
 import Image from "next/image";
-
 import { topCategoryStyles } from "@/constants";
 import { cn } from "@/lib/utils";
-
 import { Progress } from "./ui/progress";
+
+interface CategoryProps {
+  category: {
+    name: string;
+    count: number;
+    totalCount: number;
+    bg?: string;
+    circleBg?: string;
+    text?: { main?: string; count?: string };
+    progress?: { bg?: string; indicator?: string };
+    icon: string;
+  };
+}
 
 const Category = ({ category }: CategoryProps) => {
   const {
@@ -13,8 +24,7 @@ const Category = ({ category }: CategoryProps) => {
     progress: { bg: progressBg, indicator },
     icon,
   } = topCategoryStyles[category.name as keyof typeof topCategoryStyles] ||
-  topCategoryStyles.default;
-
+    topCategoryStyles.default;
   return (
     <div className={cn("gap-[18px] flex p-4 rounded-xl", bg)}>
       <figure className={cn("flex-center size-10 rounded-full", circleBg)}>
