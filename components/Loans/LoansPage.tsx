@@ -38,7 +38,7 @@ const LoanSection: React.FC<LoanSectionProps> = ({
   };
 
   return (
-    <div className={`loan-section my-8 p-6 bg-white shadow-lg rounded-lg transition-all duration-300 ${isOpen ? 'shadow-xl' : 'shadow-lg'}`}>
+    <div className={`loan-section my-8 p-6 bg-white shadow-lg rounded-lg transition-all duration-300 ${isOpen ? "shadow-xl" : "shadow-lg"}`}>
       <div className="flex items-center justify-between cursor-pointer" onClick={toggleDetails}>
         <img src={imageUrl} alt={title} className="w-32 h-32 rounded-lg" />
         <div className="flex-1 mx-4">
@@ -57,11 +57,11 @@ const LoanSection: React.FC<LoanSectionProps> = ({
               <button
                 key={tab}
                 className={`px-4 py-2 font-medium text-sm ${
-                  activeTab === tab ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500'
+                  activeTab === tab ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-500"
                 }`}
                 onClick={() => setActiveTab(tab as PaginationTab)}
               >
-                {tab.charAt(0).toUpperCase() + tab.slice(1).replace(/([A-Z])/g, ' $1')}
+                {tab.charAt(0).toUpperCase() + tab.slice(1).replace(/([A-Z])/g, " $1")}
               </button>
             ))}
           </div>
