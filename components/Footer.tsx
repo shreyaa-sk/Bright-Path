@@ -1,14 +1,9 @@
-import { logoutAccount } from '@/lib/actions/user.actions'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const Footer = ({ user, type = 'desktop' }: FooterProps) => {
   const router = useRouter();
-
-  const handleLogOut = async () => {
-    const loggedOut = await logoutAccount();
-  }
 
   return (
     <footer className="footer">
@@ -27,7 +22,7 @@ const Footer = ({ user, type = 'desktop' }: FooterProps) => {
           </p>
       </div>
 
-      <div className="footer_image" onClick={handleLogOut}>
+      <div className="footer_image">
         <Image src="icons/logout.svg" fill alt="jsm" />
       </div>
     </footer>

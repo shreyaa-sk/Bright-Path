@@ -120,20 +120,6 @@ export async function getLoggedInUser() {
   }
 }
 
-export const logoutAccount = async () => {
-  try {
-    const { account } = await createSessionClient();
-
-    cookies().delete('appwrite-session');
-
-    await account.deleteSession('current');
-    return true;
-  } catch (error) {
-    console.error(error);
-    return false;
-  }
-}
-
 export const createLinkToken = async (user: User) => {
   try {
     const tokenParams = {
