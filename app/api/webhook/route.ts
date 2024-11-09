@@ -2,7 +2,8 @@ import Stripe from "stripe";
 import { NextResponse, NextRequest } from "next/server";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET!);
-export async function POST(req:NextRequest, res:NextResponse) {
+
+export async function POST(req: NextRequest, res: NextResponse) {
   
   const payload = await req.text();
 
@@ -14,7 +15,8 @@ export async function POST(req:NextRequest, res:NextResponse) {
   const timeString = new Date(response?.created * 1000).toLocaleDateString();
 
   try {
-    let event = stripe.webhooks.constructEvent(
+    // Use const here as the event variable is not reassigned
+    const event = stripe.webhooks.constructEvent(
       payload,
       sig!,
       process.env.STRIPE_WEBHOOK_SECRET!,
